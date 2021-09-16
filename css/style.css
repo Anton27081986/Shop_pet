@@ -469,7 +469,7 @@ input[type="text"]{
     width: 250px;
     height: 40px;
     font-size: 16px;
-    background-color: rgb(201, 196, 196);
+    background-color: rgba(201, 196, 196, 0.336);
     color: black;
     border: none;
 
