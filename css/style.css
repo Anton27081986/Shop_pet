@@ -4,8 +4,10 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('../fonts/pt-sans-v12-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/pt-sans-v12-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+        url('../fonts/pt-sans-v12-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/pt-sans-v12-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* playfair-display-regular - latin */
@@ -14,30 +16,38 @@
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('../fonts/playfair-display-v22-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/playfair-display-v22-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
-  /* playfair-display-700 - latin */
-  @font-face {
+        url('../fonts/playfair-display-v22-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/playfair-display-v22-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* playfair-display-700 - latin */
+@font-face {
     font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 700;
     src: local(''),
-         url('../fonts/playfair-display-v22-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-         url('../fonts/playfair-display-v22-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-  }
+        url('../fonts/playfair-display-v22-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/playfair-display-v22-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 
 html {
     box-sizing: border-box;
 }
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
 body {
     font-family: 'PT Sans';
     font-style: normal;
-    font-weight: 400;  
+    font-weight: 400;
 }
 
 /* =========== Header style START=========== */
@@ -129,7 +139,7 @@ body {
     padding: 26px;
 }
 
-.header__item:hover{
+.header__item:hover {
     transition: 1s;
     background: rgba(201, 196, 196, 0.137);
     color: black;
@@ -156,34 +166,34 @@ body {
 
 /* =========== Main style START=========== */
 
-.section__1{
+.section__1 {
     height: 810px;
     background: url(../img/SVG/Rectangle\ 3.jpg) no-repeat center;
     background-size: cover;
 }
 
-.logo__main__section__1{
+.logo__main__section__1 {
     padding-left: 520px;
     padding-top: 160px;
 }
 
-.text__main__section__1{
+.text__main__section__1 {
     padding-top: 80px;
     padding-left: 300px;
 }
 
-.wrapper__section__2{
+.wrapper__section__2 {
     display: flex;
     height: 730px;
 }
 
-.new__season{
+.new__season {
     height: 730px;
     width: 60%;
     background-color: black;
 }
 
-.text__new__season{
+.text__new__season {
     font-family: Playfair Display;
     font-style: normal;
     font-weight: bold;
@@ -195,19 +205,19 @@ body {
     padding-top: 100px;
 }
 
-.cards__new__season{
+.cards__new__season {
     display: flex;
     justify-content: space-between;
     margin: 50px 10px 0 10px;
 }
 
-.new__colection{
+.new__colection {
     height: 730px;
     width: 40%;
     background: url(../img/SVG/bg_new_collection.jpg) no-repeat;
 }
 
-.text__new__colection{
+.text__new__colection {
     font-family: PT Sans;
     font-weight: bold;
     font-size: 36px;
@@ -217,7 +227,7 @@ body {
     padding-top: 450px;
 }
 
-.btn__new__colection{
+.btn__new__colection {
     margin-left: 200px;
     margin-top: 50px;
     width: 138px;
@@ -235,30 +245,30 @@ body {
     background-color: transparent;
 }
 
-.btn__new__colection:hover{
+.btn__new__colection:hover {
     /* opacity: .75; */
     cursor: pointer;
     transition: 0.5s;
-    background: rgba(201, 196, 196, 0.137);
+    background: rgba(201, 196, 196, 0.322);
     /* color: black; */
 }
 
-.wrapper__section__3{
+.wrapper__section__3 {
     display: flex;
     height: 600px;
 }
 
-.simpl__image{
+.simpl__image {
     background: url(/img/SVG/bg_simpl_image.jpg) no-repeat center;
     width: 40%;
 }
 
-.old__colection{
+.old__colection {
     background-color: black;
     width: 60%;
 }
 
-.old__colection__header{
+.old__colection__header {
     font-family: Playfair Display;
     font-style: normal;
     font-weight: normal;
@@ -270,7 +280,7 @@ body {
     padding-top: 80px;
 }
 
-.old__colection__text{
+.old__colection__text {
     font-family: PT Sans;
     font-style: normal;
     font-weight: normal;
@@ -283,7 +293,7 @@ body {
     margin-left: 150px;
 }
 
-.btn__old__colection{
+.btn__old__colection {
     margin-left: 200px;
     margin-top: 100px;
     width: 400px;
@@ -301,18 +311,19 @@ body {
     background-color: transparent;
 }
 
-.btn__old__colection:hover{
+.btn__old__colection:hover {
     /* opacity: .75; */
     cursor: pointer;
     transition: 0.5s;
-    background: rgba(201, 196, 196, 0.137);
+    background: rgba(201, 196, 196, 0.322);
+    /* color: black; */
 }
 
-.section__4{
+.section__4 {
     background-color: black;
 }
 
-.new__arrivals__header{
+.new__arrivals__header {
     font-family: Playfair Display;
     font-style: normal;
     font-weight: bold;
@@ -324,7 +335,7 @@ body {
     padding-top: 40px;
 }
 
-.new__arrivals__cards{
+.new__arrivals__cards {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -334,11 +345,11 @@ body {
     padding-bottom: 30px;
 }
 
-.section__5{
+.section__5 {
     background-color: #0F0F0F;
 }
 
-.our__brends__header{
+.our__brends__header {
     font-family: Playfair Display;
     font-style: normal;
     font-weight: bold;
@@ -348,10 +359,10 @@ body {
     text-transform: uppercase;
     color: white;
     padding-top: 30px;
-    
+
 }
 
-.our__brends{
+.our__brends {
     display: flex;
     justify-content: space-between;
     width: 1100px;
@@ -362,19 +373,19 @@ body {
 
 /* =========== Footer style START=========== */
 
-.footer{
+.footer {
     display: flex;
     justify-content: space-between;
     background: url(../img/SVG/bg_footer.jpg) no-repeat center;
     padding-bottom: 50px;
 }
 
-.footer__shop__info{
+.footer__shop__info {
     width: 30%;
     margin-left: 50px;
 }
 
-.shop__info__header{
+.shop__info__header {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -384,7 +395,7 @@ body {
     padding-top: 30px;
 }
 
-.shop__info__text{
+.shop__info__text {
     font-family: PT Sans;
     font-style: normal;
     font-weight: normal;
@@ -394,11 +405,11 @@ body {
     padding-top: 30px;
 }
 
-.footer__category{
+.footer__category {
     width: 30%;
 }
 
-.footer__category__header{
+.footer__category__header {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -408,39 +419,39 @@ body {
     padding-top: 30px;
 }
 
-.footer__category__links{
+.footer__category__links {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     flex-wrap: wrap;
     padding-right: 10px;
     padding-top: 30px;
 }
 
-.footer__category__item{
+.footer__category__item {
     /* border: 1px solid black; */
     background-color: black;
-    padding: 10px;
+    padding: 15px 30px 15px 30px;
     margin-right: 20px;
     margin-bottom: 30px;
 }
 
-.footer__category__item:hover{
+.footer__category__item:hover {
     transition: 0.5s;
     background: rgba(201, 196, 196, 0.137);
     color: black;
 }
 
-.footer__category__link{
+.footer__category__link {
     text-decoration: none;
     color: #D0D0D0;
 }
 
-.footer__mailing{
+.footer__mailing {
     width: 30%;
     margin-right: 50px;
 }
 
-.footer__mailing__header{
+.footer__mailing__header {
     font-family: Playfair Display;
     font-style: normal;
     font-weight: normal;
@@ -451,7 +462,7 @@ body {
     padding-top: 30px;
 }
 
-.footer__mailing__text{
+.footer__mailing__text {
     font-family: PT Sans;
     font-style: normal;
     font-weight: normal;
@@ -461,11 +472,11 @@ body {
     padding-top: 30px;
 }
 
-.footer__mailing__form{
+.footer__mailing__form {
     padding-top: 30px;
 }
 
-input[type="text"]{
+input[type="text"] {
     width: 250px;
     height: 40px;
     font-size: 16px;
@@ -475,7 +486,7 @@ input[type="text"]{
 
 }
 
-.btn__input{
+.btn__input {
     padding: 5px;
     height: 40px;
     width: 150px;
@@ -486,19 +497,13 @@ input[type="text"]{
     line-height: 150%;
     letter-spacing: 0.05em;
     color: #FFFFFF;
-    background-color:black;
+    background-color: black;
     border: none;
     cursor: pointer;
 }
 
-.btn__input:hover{
+.btn__input:hover {
     transition: 1s;
     background: rgba(201, 196, 196, 0.336);
     color: black;
 }
-
-
-
-
-
-

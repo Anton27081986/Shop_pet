@@ -8,6 +8,7 @@ const inputName = document.querySelector('.name'),
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+    
     const objForCreate = {
         name: inputName.value,
         url: inputUrl.value,
@@ -17,6 +18,8 @@ form.addEventListener('submit', (event) => {
 
     ApiInteraction.createNewCard(objForCreate);
 });
+
+
 
 
 

@@ -5,7 +5,12 @@ const postData = async (url, data) => {
             'Content-type': 'application/json'
         },
         body: JSON.stringify(data)
+        
     });
+
+    if (result.ok) {
+        alert('Данные успешно добавлены');
+    }
     return await result.json();
 };
 
