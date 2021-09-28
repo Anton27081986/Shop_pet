@@ -1,6 +1,7 @@
 
 import {postDataAuth} from '../services/authorization.js';
 import { LocalStorageService } from '../services/localStorage.js';
+import { configObj } from '../environments/environments_production.js';
 
 
 const inputUsername = document.querySelector('#username'),
@@ -19,37 +20,36 @@ function getInputValue(event) {
         password: inputPassword.value
     };
 
-    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=',
-        apiKey = 'AIzaSyBS-sj1w0AJouXQ5qtYDGq3hNI2wW4wvcs';
+    // let url = 'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=';
+        // apiKey = 'AIzaSyBS-sj1w0AJouXQ5qtYDGq3hNI2wW4wvcs';
 
-    postDataAuth(url, apiKey,authObj.email, authObj.password)
+    postDataAuth(configObj.url, configObj.apiKey,authObj.email, authObj.password)
     .then(data => {
-        if (typeof(data.error.code) == 'undefined') {
-            console.log('тест');
-        }
-        if (data.error.code == 400) {
-            console.log(typeof data.error.code);
+        
+        if (!data.idToken) {
             alert('Данные не верны');
             return;
         }
         if (!LocalStorageService.getItemStorage('idToken')) {
-            setItem(data.idToken);
-            document.location.replace("http://127.0.0.1:5500/admin.html");
+            setItem(data.idToken, data.expiresIn);
+            document.location.replace(configObj.urlAdmin);
         } 
-        // setItem(data.idToken);
+        if (LocalStorageService.getItemStorage('idToken')) {
+            document.location.replace(configObj.urlAdmin);
+        }
     }); 
 }
 
-function setItem (idToken) {
+function setItem (idToken, expiresIn) {
+    const liveTimeToken = new Date(new Date().getTime() + +expiresIn * 1000);
     LocalStorageService.setItemStorage('idToken', idToken);
+    LocalStorageService.setItemStorage('expiresIn',liveTimeToken);
+
 }
-
-
-
-
 
 
 // https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=[API_KEY]
 
 // AIzaSyBS-sj1w0AJouXQ5qtYDGq3hNI2wW4wvcs
+
 
