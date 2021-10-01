@@ -15,8 +15,9 @@ export class ApiInteraction {
                     <div class="card" style="display: flex">
                         <div style="margin-left: 100px; margin-top: 40px">
                             <img style="background-color: white; width: 220px; height: 320px;" class="img" src="${item.url}" alt="">
-                            <p style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.name}</p>
-                            <p style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.price} ${item.currency}</p>
+                            <p class="name__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.name}</p>
+                            <p class="price__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.price} ${item.currency}</p>
+                            <button class="btn__buy">Купить</button>
                         </div>
                     </div>
                 `);
@@ -24,7 +25,5 @@ export class ApiInteraction {
         });
     }
 }
-
-
 
 
