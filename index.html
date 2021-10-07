@@ -35,7 +35,7 @@
                         <a href="/" class="header__link">Настройки</a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">
+                        <a href="/" class="header__link header__cart">
                             <img src="/img/SVG/ic_korzina.svg" alt="Корзина">
                             <span class="count__prod"></span>
                         </a>
@@ -190,8 +190,31 @@
             </div>
         </div>
     </footer>
+    <!-- Modal Cart============================================================================================ -->
+    <div class="modal">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <form action="#">
+                    <div data-close class="modal__close">&times;</div>
+                    <div class="modal__title">Выбранный товар</div>
+                    <div class="modal__input__count list__products">
+                        <span>Список товаров:</span>
+                        <div class="modal__products">
+                            <span class="item__prodaucts"></span><br>
+                        </div>
+                    </div>
+                    <!-- <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
+                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input"> -->
+                    <div class="modal__input__count">Количество: <span class="modal__count"></span></div>
+                    <div class="modal__input__sum"> Сумма: <span class="modal__sum"></span> </div>
+                    <button class="btn btn_dark btn_min">Оформить заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/services/checkUrl.js"></script>
+<script type="module" src="./js/components/cartForm.js"></script>
 
 </html>

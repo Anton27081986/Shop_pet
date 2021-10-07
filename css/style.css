@@ -507,3 +507,130 @@ input[type="text"] {
     background: rgba(201, 196, 196, 0.336);
     color: black;
 }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5)
+}
+
+.modal__dialog {
+    max-width: 500px;
+    margin: 40px auto
+}
+
+.modal__content {
+    position: relative;
+    width: 100%;
+    padding: 40px;
+    background-color: rgb(139, 130, 130);
+    border: 1px solid rgba(0, 0, 0, .2);
+    border-radius: 4px;
+    max-height: 80vh;
+    overflow-y: auto
+}
+
+.modal__close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 30px;
+    color: #000;
+    opacity: .5;
+    font-weight: 700;
+    border: none;
+    background-color: transparent;
+    cursor: pointer
+}
+
+.modal__title {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase
+}
+
+.modal__input__count,
+.modal__input__sum {
+    display: block;
+    margin: 20px auto 20px auto;
+    width: 280px;
+    height: 50px;
+    background: rgb(95, 92, 92);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .2);
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+    outline: 0;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.list__products {
+    height: auto;
+}
+
+.modal .btn {
+    display: block;
+    width: 280px;
+    margin: 0 auto
+}
+
+.btn {
+    margin-left: 200px;
+    margin-top: 100px;
+    width: 400px;
+    height: 47px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
+}
+
+.btn:hover {
+    transition: 1s;
+    background: rgba(201, 196, 196, 0.842);
+    color: black;
+}
+
+.show {
+    display: block
+}
+
+.hide {
+    display: none
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.1;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
