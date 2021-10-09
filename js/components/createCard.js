@@ -16,7 +16,7 @@ form.addEventListener('submit', (event) => {
         currency: inputCurrency.value
     };
 
-    ApiInteraction.createNewCard(objForCreate);
+    ApiInteraction.createNewObjForFB(objForCreate, 'card');
 });
 
 

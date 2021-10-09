@@ -556,7 +556,9 @@ input[type="text"] {
 }
 
 .modal__input__count,
-.modal__input__sum {
+.modal__input__sum,
+.modal__input__phone,
+.modal__input__name {
     display: block;
     margin: 20px auto 20px auto;
     width: 280px;

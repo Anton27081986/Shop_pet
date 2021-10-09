@@ -183,9 +183,10 @@
                 nunc nulla nibh.
             </div>
             <div class="footer__mailing__form">
-                <form>
-                    <input class="window__input" type="text" name="mail" placeholder="Ваша почта">
-                    <input class="btn__input" type="submit" name="submit" value="подписаться">
+                <form class="form__subscribe">
+                    <input class="window__input window__input__subscribe" type="text" name="mail"
+                        placeholder="Ваша почта">
+                    <button class="btn__input btn__subscribe" type="submit" name="submit">подписаться</button>>
                 </form>
             </div>
         </div>
@@ -194,7 +195,7 @@
     <div class="modal">
         <div class="modal__dialog">
             <div class="modal__content">
-                <form action="#">
+                <form class="form__modal" action="#">
                     <div data-close class="modal__close">&times;</div>
                     <div class="modal__title">Выбранный товар</div>
                     <div class="modal__input__count list__products">
@@ -203,11 +204,13 @@
                             <span class="item__prodaucts"></span><br>
                         </div>
                     </div>
-                    <!-- <input required placeholder="Ваше имя" name="name" type="text" class="modal__input">
-                    <input required placeholder="Ваш номер телефона" name="phone" type="phone" class="modal__input"> -->
                     <div class="modal__input__count">Количество: <span class="modal__count"></span></div>
-                    <div class="modal__input__sum"> Сумма: <span class="modal__sum"></span> </div>
-                    <button class="btn btn_dark btn_min">Оформить заказ</button>
+                    <div class="modal__input__sum"> Сумма: <span class="modal__sum"></span></div>
+                    <input class="modal__input__phone input-number" required placeholder="Номер телефона" type="text"
+                        class="modal__input">
+                    <input class="modal__input__name input-name" required placeholder="Имя" type="text"
+                        class="modal__input">
+                    <button class="btn btn_dark btn_min btn__modal">Оформить заказ</button>
                 </form>
             </div>
         </div>
@@ -216,5 +219,6 @@
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/services/checkUrl.js"></script>
 <script type="module" src="./js/components/cartForm.js"></script>
+<script type="module" src="./js/components/subscribeForm.js"></script>
 
 </html>

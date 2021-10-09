@@ -4,8 +4,8 @@ import {addProdToCart} from '../components/buyWatch.js';
 
 
 export class ApiInteraction {
-    static createNewCard(data) {
-        postData('https://shop-watch-81f60-default-rtdb.firebaseio.com/card.json', data);
+    static createNewObjForFB(data, name) {
+        postData(`https://shop-watch-81f60-default-rtdb.firebaseio.com/${name}.json`, data);
     }
 
     static getCard() {
@@ -28,6 +28,8 @@ export class ApiInteraction {
         })
         .then(addProdToCart()));
     }
+
+
 }
 
 

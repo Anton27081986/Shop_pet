@@ -3,8 +3,6 @@ import {LocalStorageService} from '../services/localStorage.js';
 const count = document.querySelector('.count__prod');
 
 export function addProdToCart() {
-    
-
     let elemtsStorage = LocalStorageService.getItemStorage('products'),
         arrProducts = [];
      
@@ -14,7 +12,6 @@ export function addProdToCart() {
         arrProducts = JSON.parse(LocalStorageService.getItemStorage('products'));
         count.textContent = arrProducts.length;
     }
-
         
     document.querySelectorAll('.btn__buy').forEach (item => {
         item.addEventListener('click', () => {
@@ -28,10 +25,5 @@ export function addProdToCart() {
             addProdToCart();
         });
     });
-
-    
-
-    
-    
 }
 
