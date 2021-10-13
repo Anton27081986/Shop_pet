@@ -4,7 +4,8 @@ const inputName = document.querySelector('.name'),
       inputUrl = document.querySelector('.url'),
       inputPrice = document.querySelector('.price'),
       inputCurrency = document.querySelector('.currency'),
-      form = document.querySelector('.railway');
+      form = document.querySelector('.railway'),
+      collection = document.querySelector('.select__collection');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -13,11 +14,21 @@ form.addEventListener('submit', (event) => {
         name: inputName.value,
         url: inputUrl.value,
         price: inputPrice.value,
-        currency: inputCurrency.value
+        currency: inputCurrency.value,
+        collection: collection.value
     };
 
-    ApiInteraction.createNewObjForFB(objForCreate, 'card');
+    // console.log(objForCreate);
+    ApiInteraction.createNewObjForFB(objForCreate, objForCreate.collection);
+    clearAdminModal();
 });
+
+function clearAdminModal() {
+    inputName.value = '';
+    inputUrl.value = '';
+    inputPrice.value = '';
+    inputCurrency.value = '';
+}
 
 
 

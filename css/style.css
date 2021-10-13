@@ -34,6 +34,88 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.name {
+    color: #2a068f;
+}
+
+.price {
+    color: #2a068f;
+    top: 20px
+}
+
+.new__arrivals__cards {
+    width: 1200px !important;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+}
+
+.slide {
+    height: 80vh;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    color: #fff;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.btn__slider {
+    margin-left: 35%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 400px;
+    height: 47px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+.btn__slider:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    background: rgba(201, 196, 196, 0.322);
+}
+
+.slide h3 {
+    position: absolute;
+    font-size: 24px;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.slide.active {
+    flex: 10;
+}
+
+.slide.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
 html {
     box-sizing: border-box;
 }
@@ -205,10 +287,12 @@ body {
     padding-top: 100px;
 }
 
-.cards__new__season {
+.cards__old__season {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin: 50px 10px 0 10px;
+
 }
 
 .new__colection {

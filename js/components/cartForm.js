@@ -71,7 +71,7 @@ function getProductsForUserBuy() {
         sum: modalSum.textContent,
         products: arrProd
     };
-    console.log(objProductsToFB);
+    // console.log(objProductsToFB);
 
     document.querySelector('.form__modal').addEventListener('submit', (event) => {
         event.preventDefault();
@@ -98,7 +98,6 @@ function getDataFromLS() {
     }
     return itemProd;
 }
-
 
 
 

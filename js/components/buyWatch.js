@@ -12,18 +12,18 @@ export function addProdToCart() {
         arrProducts = JSON.parse(LocalStorageService.getItemStorage('products'));
         count.textContent = arrProducts.length;
     }
-        
-    document.querySelectorAll('.btn__buy').forEach (item => {
-        item.addEventListener('click', () => {
-            const obj = {
-                name: item.parentElement.querySelector('.name__card').textContent,
-                price: item.parentElement.querySelector('.price__card').textContent
-            };
-            arrProducts.push(obj);
+       
+    document.querySelector('.btn__slider').addEventListener('click', () => {
+        const objWatchFromSlider = {
+            name: document.querySelector('.active').children[0].textContent,
+            price: document.querySelector('.active').children[1].textContent
+        };
+        arrProducts.push(objWatchFromSlider);
 
-            LocalStorageService.setItemStorage('products', JSON.stringify(arrProducts));
-            addProdToCart();
-        });
+        LocalStorageService.setItemStorage('products', JSON.stringify(arrProducts));
+        addProdToCart();
+        
     });
+    
 }
 

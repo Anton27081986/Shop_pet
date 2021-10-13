@@ -1,8 +1,13 @@
 import {ApiInteraction} from '../services/APIService.js';
 
+
 function getAllCard() {
     ApiInteraction.getCard();
 
 }
 
-export {getAllCard};
+function getOldCard() {
+    ApiInteraction.getOldCollection();
+}
+
+export {getAllCard, getOldCard};
