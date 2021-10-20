@@ -40,7 +40,7 @@
                             <span class="count__prod"></span>
                         </a>
                     </li>
-                    <li class="header__item">
+                    <li class="header__item search__item">
                         <a href="/" class="header__link">
                             <img src="/img/SVG/ic_search.svg" alt="Поиск">
                         </a>
@@ -223,10 +223,24 @@
             </div>
         </div>
     </div>
+    <!-- Modal search -------------------------------------------------------------------------------------->
+    <div class="modal__search">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <div data-close class="modal__search__close">&times;</div>
+                <input class="modal__input__phone input-number" required placeholder="Поиск" type="text"
+                    class="modal__input">
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/services/checkUrl.js"></script>
 <script type="module" src="./js/components/cartForm.js"></script>
 <script type="module" src="./js/components/subscribeForm.js"></script>
+<script type="module" src="js/components/search.js"></script>
 
 </html>

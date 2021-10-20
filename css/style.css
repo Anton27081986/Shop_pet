@@ -285,6 +285,7 @@ body {
     text-transform: uppercase;
     color: white;
     padding-top: 100px;
+    margin-bottom: 30px;
 }
 
 .cards__old__season {
@@ -293,6 +294,17 @@ body {
     justify-content: space-between;
     margin: 50px 10px 0 10px;
 
+}
+
+.number__pagination {
+    color: white;
+    z-index: 1000;
+    border: 1px solid white;
+    text-align: centr;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
 }
 
 .new__colection {
@@ -592,7 +604,8 @@ input[type="text"] {
     color: black;
 }
 
-.modal {
+.modal,
+.modal__search {
     position: fixed;
     top: 0;
     left: 0;
@@ -620,7 +633,8 @@ input[type="text"] {
     overflow-y: auto
 }
 
-.modal__close {
+.modal__close,
+.modal__search__close {
     position: absolute;
     top: 8px;
     right: 14px;
