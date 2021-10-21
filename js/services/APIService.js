@@ -15,7 +15,7 @@ export class ApiInteraction {
         .then(data => Object.entries(data))
         .then(data => new Promise ((resolve, reject) => {
             data.forEach(item => {
-                console.log(item);
+                // console.log(item);
                 document.querySelector('.new__arrivals__cards').insertAdjacentHTML('afterbegin', `
                 <div id="${item[0]}"class="slide" style="background-image: url('${item[1].url}');">
                     <h3 class="name">${item[1].name}</h3>
@@ -37,7 +37,7 @@ export class ApiInteraction {
             return data.slice(0, 3);
         })
         .then(data => {
-            console.log(data);
+            // console.log(data);
             data.forEach(item => {
                 document.querySelector('.cards__old__season').insertAdjacentHTML('afterbegin', `
                     <div class="card" style="display: flex; margin-bottom: 130px;">
