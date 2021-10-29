@@ -193,6 +193,16 @@ body {
     background-color: #0F0F0F;
 }
 
+.header__wrapper__light {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    background-color: #da8e8e;
+}
+
+
 .header__wrapper__bg {
     /* width: 1920px; */
     background-color: #0F0F0F;
@@ -605,7 +615,8 @@ input[type="text"] {
 }
 
 .modal,
-.modal__search {
+.modal__search,
+.modal__settings {
     position: fixed;
     top: 0;
     left: 0;
@@ -634,7 +645,8 @@ input[type="text"] {
 }
 
 .modal__close,
-.modal__search__close {
+.modal__search__close,
+.modal__settings__close {
     position: absolute;
     top: 8px;
     right: 14px;

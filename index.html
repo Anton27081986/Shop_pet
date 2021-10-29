@@ -32,7 +32,7 @@
                         <a href="/" class="header__link">Личный кабинет</a>
                     </li>
                     <li class="header__item">
-                        <a href="/" class="header__link">Настройки</a>
+                        <a href="/" class="header__link header__link__settings">Настройки</a>
                     </li>
                     <li class="header__item">
                         <a href="/" class="header__link header__cart">
@@ -237,11 +237,22 @@
             </div>
         </div>
     </div>
+    <!-- Modal setings------------------------------------------------------------------------------------->
+    <div class="modal__settings">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <div data-close class="modal__settings__close">&times;</div>
+                <label><input class="modal__checkbox__light" type="radio" name="them">Свтелая тема</label>
+                <label><input class="modal__checkbox__dark" type="radio" name="them">Темная тема</label>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/services/checkUrl.js"></script>
 <script type="module" src="./js/components/cartForm.js"></script>
 <script type="module" src="./js/components/subscribeForm.js"></script>
 <script type="module" src="js/components/search.js"></script>
+<script type="module" src="js/components/settings.js"></script>
 
 </html>

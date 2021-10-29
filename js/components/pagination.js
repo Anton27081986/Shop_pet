@@ -12,7 +12,7 @@ getData('https://shop-watch-81f60-default-rtdb.firebaseio.com/oldCollection.json
 
 function createPagination(data) {
     let count = Math.ceil(data.length / 3);
-    console.log(Math.ceil(7/3));
+    // console.log(Math.ceil(7/3));
     for (let i = 1; i <= count; i++) {
         document.querySelector('.pagination').innerHTML += `<a class="number__pagination">${i}</a>`;
     }
