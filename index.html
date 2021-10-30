@@ -25,7 +25,7 @@
             </div>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item">
+                    <li class="header__item header__like">
                         <a href="/" class="header__link">Понравилось</a>
                     </li>
                     <li class="header__item">
@@ -247,6 +247,19 @@
             </div>
         </div>
     </div>
+    <!-- Modal like----------------------------------------------------------------------------------------->
+    <div class="modal__like">
+        <div class="modal__dialog">
+            <div class="modal__content">
+                <div data-close class="modal__like__close">&times;</div>
+
+                <div class="like__result">
+
+                </div>
+                <!-- <button class="btn__search">Искать</button> -->
+            </div>
+        </div>
+    </div>
 </body>
 <script type="module" src="./js/index.js"></script>
 <script type="module" src="./js/services/checkUrl.js"></script>
@@ -254,5 +267,6 @@
 <script type="module" src="./js/components/subscribeForm.js"></script>
 <script type="module" src="js/components/search.js"></script>
 <script type="module" src="js/components/settings.js"></script>
+<script type="module" src="js/components/like.js"></script>
 
 </html>

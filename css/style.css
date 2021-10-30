@@ -616,7 +616,8 @@ input[type="text"] {
 
 .modal,
 .modal__search,
-.modal__settings {
+.modal__settings,
+.modal__like {
     position: fixed;
     top: 0;
     left: 0;
@@ -646,7 +647,8 @@ input[type="text"] {
 
 .modal__close,
 .modal__search__close,
-.modal__settings__close {
+.modal__settings__close,
+.modal__like__close {
     position: absolute;
     top: 8px;
     right: 14px;

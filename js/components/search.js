@@ -49,7 +49,7 @@ function filtrArr(data, searchValue) {
         console.log(item);
         document.querySelector('.search__result').innerHTML += `
         <div class="card" style="display: flex;">
-            <div style="margin-left: 50px; margin-top: 40px; ">
+            <div style="margin-left: 50px; margin-top: 40px; min-width: 100px ">
                 <img style="background-color: white; width: 250px; height: 270px;" class="img" src="${item.url}" alt="">
                 <p class="name__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.name}</p>
                 <p class="price__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.price} ${item.currency}</p>
@@ -61,11 +61,3 @@ function filtrArr(data, searchValue) {
 }
 
 
-{/* <div class="card" style="display: flex; margin-bottom: 130px;">
-                <div style="margin-left: 50px; margin-top: 40px; ">
-                    <img style="background-color: white; width: 200px; height: 270px;" class="img" src="${item.url}" alt="">
-                    <p class="name__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.name}</p>
-                    <p class="price__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.price} ${item.currency}</p>
-                    <button class="btn__buy">Купить</button>
-                </div>
-            </div> */}

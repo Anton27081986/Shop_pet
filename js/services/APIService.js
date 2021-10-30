@@ -3,6 +3,7 @@ import {getData} from './getData.js';
 import {addProdToCart} from '../components/buyWatch.js';
 import { showSlider } from '../components/watchSlider.js';
 import { getPagination } from '../components/pagination.js';
+import {getLike} from '../components/like.js';
 
 
 export class ApiInteraction {
@@ -17,16 +18,18 @@ export class ApiInteraction {
             data.forEach(item => {
                 // console.log(item);
                 document.querySelector('.new__arrivals__cards').insertAdjacentHTML('afterbegin', `
-                <div id="${item[0]}"class="slide" style="background-image: url('${item[1].url}');">
-                    <h3 class="name">${item[1].name}</h3>
+                <div id="${item[0]}"class="slide" myurl='${item[1].url}' style="background-image: url('${item[1].url}');">
+                    <h3 class="name">${item[1].name} &#128077</h3>
                     <h3 class="price">${item[1].price} ${item[1].currency}</h3>
+
                 </div>
                 `);
             });
             resolve();
         })
         .then(addProdToCart())
-        .then(showSlider()));
+        .then(showSlider())
+        .then(getLike()));
     }
 
     static getOldCollection() {
