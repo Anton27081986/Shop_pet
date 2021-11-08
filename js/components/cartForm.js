@@ -42,6 +42,8 @@ function modalCart() {
             closeModalCart();
         }
     });
+
+    clearCart();
 }
 
 modalCart();
@@ -97,6 +99,14 @@ function getDataFromLS() {
         itemProd = JSON.parse(LocalStorageService.getItemStorage('products'));
     }
     return itemProd;
+}
+
+function clearCart() {
+    document.querySelector('.btn__clear__cart').addEventListener('click', () => {
+        LocalStorageService.removeItemStorage('products');
+        alert('Корзина очищена');
+        window.location.reload();
+    });
 }
 
 

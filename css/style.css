@@ -720,7 +720,47 @@ input[type="text"] {
     background-color: transparent;
 }
 
-.btn:hover {
+.btn__search {
+    /* margin-left: 50px;
+    margin-top: 20px; */
+    margin: 0 auto;
+    width: 100px;
+    height: 47px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn__clear__cart {
+    margin: 10px 0 0 60px;
+    width: 200px;
+    height: 47px;
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 1px solid black;
+    color: black;
+    background-color: transparent;
+
+}
+
+.btn:hover,
+.btn__search:hover,
+.btn__clear__cart:hover {
     transition: 1s;
     background: rgba(201, 196, 196, 0.842);
     color: black;

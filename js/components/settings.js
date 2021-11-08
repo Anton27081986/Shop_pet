@@ -6,9 +6,16 @@ const modalSettings = document.querySelector('.modal__settings'),
 document.querySelector('.header__link__settings').addEventListener('click', (e) => {
     e.preventDefault();
     showModalSettings();
+
+    document.querySelector('.modal__settings__close').addEventListener('click', closeModalSettins);
+
+    modalSettings.addEventListener('click', (event) => {
+        if (event.target === modalSettings || event.target.getAttribute('data-clise') == '') {
+            closeModalSettins();
+        }
+    });
 });
 
-document.querySelector('.modal__settings__close').addEventListener('click', closeModalSettins);
 
 function showModalSettings() {
     modalSettings.classList.add('show');

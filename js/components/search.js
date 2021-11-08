@@ -25,6 +25,12 @@ document.querySelector('.search__item').addEventListener('click', (event) => {
     document.querySelector('.modal__search__close').addEventListener('click', () => {
         closeModalSearch();
     });
+
+    modalSearch.addEventListener('click', (event) => {
+        if (event.target === modalSearch || event.target.getAttribute('data-close') == '') {
+            closeModalSearch();
+        }
+    });
     
 });
 
@@ -50,7 +56,7 @@ function filtrArr(data, searchValue) {
         document.querySelector('.search__result').innerHTML += `
         <div class="card" style="display: flex;">
             <div style="margin-left: 50px; margin-top: 40px; min-width: 100px ">
-                <img style="background-color: white; width: 250px; height: 270px;" class="img" src="${item.url}" alt="">
+                <img style="background-color: white; width: 250px; height: 270px;" class="img" src="https://st.violity.com/auction/big/auctions/91/53/97/91539738.jpg" alt="">
                 <p class="name__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.name}</p>
                 <p class="price__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.price} ${item.currency}</p>
                 <button class="btn__buy">Купить</button>

@@ -1,9 +1,9 @@
 import { postData } from './postData.js';
-import {getData} from './getData.js';
-import {addProdToCart} from '../components/buyWatch.js';
+import { getData } from './getData.js';
+import { addProdToCart } from '../components/buyWatch.js';
 import { showSlider } from '../components/watchSlider.js';
 import { getPagination } from '../components/pagination.js';
-import {getLike} from '../components/like.js';
+import { getLike } from '../components/like.js';
 
 
 export class ApiInteraction {
@@ -21,7 +21,6 @@ export class ApiInteraction {
                 <div id="${item[0]}"class="slide" myurl='${item[1].url}' style="background-image: url('${item[1].url}');">
                     <h3 class="name">${item[1].name} &#128077</h3>
                     <h3 class="price">${item[1].price} ${item[1].currency}</h3>
-
                 </div>
                 `);
             });

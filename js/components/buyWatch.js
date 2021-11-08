@@ -22,6 +22,7 @@ export function addProdToCart() {
 
         LocalStorageService.setItemStorage('products', JSON.stringify(arrProducts));
         addProdToCart();
+        alert('Товар успешно добавлен');
         
     });
     
