@@ -4,3 +4,4 @@ import { getPagination } from './components/pagination.js';
 
 getAllCard();
 getOldCard();
+

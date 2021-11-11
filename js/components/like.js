@@ -28,6 +28,8 @@ function showModalLike() {
 function closeModalLike() {
     modalLike.classList.add('hide');
     modalLike.classList.remove('show');
+
+    document.querySelector('.like__result').innerHTML = '';
 }
 
 
@@ -50,9 +52,9 @@ function showLikesInModal() {
     getData('https://shop-watch-81f60-default-rtdb.firebaseio.com/likes.json')
     .then(data => Object.entries(data))
     .then(data => new Promise((resolve, reject) => {
-        // console.log(data);
+        console.log(data);
         data.forEach(item => {
-            console.log(item);
+            // console.log(item);
             document.querySelector('.like__result').innerHTML += `
             <div id=${item[0]} class="card" style="display: flex;">
                 <div style="margin-left: 50px; margin-top: 40px; min-width: 100px ">
@@ -75,7 +77,7 @@ function deleteLikeInModal() {
             const id = item.parentElement.parentElement.id;
 
             deleteData(`https://shop-watch-81f60-default-rtdb.firebaseio.com/likes/${id}.json`);
-            alert('Удалено успешно');
+            alert('Товар удален');
             window.location.reload();
 
         });

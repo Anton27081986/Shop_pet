@@ -63,9 +63,7 @@
             <div class="wrapper__section__2">
                 <div class="new__season">
                     <div class="text__new__season">СЕЗОН 2019/20</div>
-                    <div class="pagination" style="text-align: center;margin-top: 10px;">
 
-                    </div>
                     <div class="cards__old__season">
 
                         <!-- <div class="card__new__season">
@@ -77,6 +75,9 @@
                         <div class="card__new__season">
                             <img src="/img/SVG/new_season_card.png" alt="Card">
                         </div> -->
+
+                    </div>
+                    <div class="pagination" style="text-align: center;margin-top: 10px;">
 
                     </div>
                 </div>
@@ -230,12 +231,16 @@
         <div class="modal__dialog">
             <div class="modal__content">
                 <div data-close class="modal__search__close">&times;</div>
-                <input class="modal__input__phone input-number search__product" placeholder="Поиск" type="text"
-                    class="modal__input">
+                <div class="form__search">
+                    <input class="modal__input__phone input-number search__product modal__input" placeholder="Поиск"
+                        type="text">
+                    <button class="btn__search">Искать</button>
+                </div>
+
                 <div class="search__result">
 
                 </div>
-                <button class="btn__search">Искать</button>
+
             </div>
         </div>
     </div>
@@ -270,5 +275,6 @@
 <script type="module" src="js/components/search.js"></script>
 <script type="module" src="js/components/settings.js"></script>
 <script type="module" src="js/components/like.js"></script>
+
 
 </html>

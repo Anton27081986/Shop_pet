@@ -2,7 +2,7 @@ import { postData } from './postData.js';
 import { getData } from './getData.js';
 import { addProdToCart } from '../components/buyWatch.js';
 import { showSlider } from '../components/watchSlider.js';
-import { getPagination } from '../components/pagination.js';
+import { getPagination, postToCartFromPagination } from '../components/pagination.js';
 import { getLike } from '../components/like.js';
 
 
@@ -38,22 +38,23 @@ export class ApiInteraction {
         .then(data => {
             return data.slice(0, 3);
         })
-        .then(data => {
-            // console.log(data);
+        .then(data => new Promise ((resolve, reject) => {
+            
             data.forEach(item => {
                 document.querySelector('.cards__old__season').insertAdjacentHTML('afterbegin', `
                     <div class="card" style="display: flex; margin-bottom: 130px;">
-                        <div style="margin-left: 50px; margin-top: 40px; ">
-                            <img style="background-color: white; width: 200px; height: 270px;" class="img" src="${item.url}" alt="">
+                        <div style="margin-right: 30px; margin-top: 40px; ">
+                            <img style="background-color: white; width: 200px; height: 210px;" class="img" src="https://st.violity.com/auction/big/auctions/91/53/97/91539738.jpg" alt="">
                             <p class="name__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.name}</p>
                             <p class="price__card" style="color: white; font-family: 'Playfair Display'; font-size: 18px">${item.price} ${item.currency}</p>
-                            <button class="btn__buy">Купить</button>
+                            <button class="btn__add__to__cart">Добавить в корзину</button>
                         </div>
                     </div>
                 `);
             });
+            resolve();
         })
-        .then();
+        .then(postToCartFromPagination()));
     }
 }
 
